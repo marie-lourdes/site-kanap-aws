@@ -13,11 +13,14 @@ app.use((req, res, next) => {
   next();
 });
 
+
+app.use('/images', express.static(path.join(__dirname, 'PUBLIC/KANAP-PUBLIC/images')));
 app.use(express.static(path.join(__dirname, 'PUBLIC')));
 
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 
 // ROUTE KANAP 
 app.use("/Kanap", kanapRoutes)

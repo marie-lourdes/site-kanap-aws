@@ -392,7 +392,7 @@ orderForm.addEventListener("submit", function (event) {
   if (!isFirstNameOk || !isLastNameOk || !isAddressOk || !isCityOk || !isEmailOk || products.length === 0) {
     return;
   }
-  fetch("http://13.38.86.40/api/products/order", {
+  fetch("http://localhost:3000/api/products/order", {
     method: "POST",
     headers: {
       "Accept": "application/json",
@@ -410,7 +410,7 @@ orderForm.addEventListener("submit", function (event) {
       // recupération du numero de commande crypté dans la reponse de l api et redirection vers l url réecrite de la page de confirmation
       console.log("réponse retourné de l'API en objet javascript", value);
       console.log("orderid ", value.orderId);
-      window.location.href = `./confirmation.html?orderId=${value.orderId}`;
+      window.location.href = `confirmation?orderId=${value.orderId}`;
       localStorage.removeItem("produits");
     })
     .catch(function (error) {
