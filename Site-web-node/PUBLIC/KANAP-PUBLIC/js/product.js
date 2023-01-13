@@ -6,7 +6,7 @@ console.log("id selectionné id selectionné", idSelected);
 
 //............ Requête du produit selectionné avec son id..................
 
-let request = fetch(`http://localhost:3000/api/products/${idSelected}`);
+let request = fetch(`http://13.38.86.40/api/products/${idSelected}`);
 console.log("requete", request); // vérification du code http 
 
 //..........Traitement de la réponse retourné par l'api en objet javascript..............

@@ -392,7 +392,7 @@ orderForm.addEventListener("submit", function (event) {
   if (!isFirstNameOk || !isLastNameOk || !isAddressOk || !isCityOk || !isEmailOk || products.length === 0) {
     return;
   }
-  fetch("http://localhost:3000/api/products/order", {
+  fetch("http://13.38.86.40/api/products/order", {
     method: "POST",
     headers: {
       "Accept": "application/json",

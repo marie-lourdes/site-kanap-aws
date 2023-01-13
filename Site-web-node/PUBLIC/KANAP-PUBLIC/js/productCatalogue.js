@@ -1,6 +1,6 @@
 //............ Requête GET des données des produits de l'api et transformation des données au format json en objet javascript...........
 
-let request = fetch("http://localhost:3000/api/products");
+let request = fetch("http://13.38.86.40/api/products");
 let requestProducts = request.then(function (res) {
     if (res.ok) {
         return res.json();
