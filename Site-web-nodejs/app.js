@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const productRoutes = require('./routes/product');
+const kanapRoutes = require("./routes/kanap");
 
 const app = express();
 
@@ -12,12 +13,16 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/images', express.static(path.join(__dirname, 'images')));
-app.use(express.static('images'));
+app.use(express.static(path.join(__dirname, 'PUBLIC')));
 
-app.use(express.urlencoded({extended: true}));
+
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// ROUTE KANAP 
+app.use("/Kanap", kanapRoutes)
 app.use('/api/products', productRoutes);
+
+
 
 module.exports = app;
