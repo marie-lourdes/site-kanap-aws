@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const productRoutes = require('./routes/product');
-const kanapRoutes = require("./routes/Kanap");
+const kanapRoutes = require("./routes/kanap");
 
 const app = express();
 
